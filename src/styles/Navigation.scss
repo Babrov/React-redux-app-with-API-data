@@ -1,0 +1,25 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #23db98;
+    font-size: 30px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+
+    .navbarLink {
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        a:hover {
+            color: white;
+        }
+    }
+}

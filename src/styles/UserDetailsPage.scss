@@ -1,0 +1,105 @@
+h1 {
+    text-align: center;
+}
+
+.userInfo {
+    display: grid;
+    grid-template: repeat(2, auto) / minmax(auto, 70px) minmax(auto, 300px);
+    list-style-type: none;
+    font-size: 22px;
+    padding: 15px;
+    h1 {
+        grid-column: 1/2 span;
+    }
+    span {
+        margin: 0;
+        text-align: start;
+    }
+    .infoDescr {
+        margin: 0;
+        display: block;
+        grid-column: 2;
+        text-align: start;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 0.8em;
+    }
+    .icon {
+        grid-row: 1/2 span;
+        align-self: center;
+        color: #1eb87f;
+        font-size: 1.2em;
+    }
+}
+
+.posts {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    .title {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+}
+.posts:last-child {
+    border-bottom: none;
+}
+.album {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: -10px 0px 13px -7px rgba(0, 0, 0, 0.3),
+        10px 0px 13px -7px rgba(0, 0, 0, 0.3), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+    .albumIcon {
+        width: 50px;
+        height: auto;
+        margin: 0;
+    }
+    .albumTitle {
+        margin-left: 20px;
+    }
+}
+.todo {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    input {
+        display: none;
+    }
+}
+.todo:last-child {
+    border: none;
+}
+
+.fakeCheckbox {
+    font-size: 20px;
+    height: auto;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 5px 0px 5px 50px;
+}
+.fakeCheckbox:before {
+    cursor: pointer;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    left: 10px;
+    top: 20%;
+}
+.done {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: lightgreen;
+    .fakeCheckbox:before {
+        content: "\2713";
+        text-align: center;
+        color: #23db98;
+    }
+}

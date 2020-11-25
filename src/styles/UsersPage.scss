@@ -1,0 +1,35 @@
+.usersList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    .user {
+        list-style-type: none;
+        width: auto;
+        padding: 1px;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+    .user:hover {
+        background-color: white;
+    }
+    .userPhoto {
+        max-width: 40px;
+        height: auto;
+        float: left;
+        background-color: #23db98;
+        border-radius: 35%;
+    }
+
+    .userName {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 30px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

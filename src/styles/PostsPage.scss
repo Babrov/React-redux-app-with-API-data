@@ -1,0 +1,21 @@
+.postsPage {
+    display: flex;
+    flex-direction: column;
+    .posts {
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 10px;
+        max-width: 500px;
+        box-shadow: 0px 10px 13px -7px #000000,
+            5px 5px 15px 5px rgba(0, 0, 0, 0);
+    }
+    h3 {
+        border-bottom: 1px solid black;
+        text-align: center;
+        font-size: 26px;
+    }
+    p {
+        margin: 15px;
+        font-size: 24px;
+    }
+}
