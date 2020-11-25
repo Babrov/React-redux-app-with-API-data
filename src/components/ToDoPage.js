@@ -1,14 +1,6 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { fetchTodos } from "../actions/ToDoActions";
 import "../styles/ToDoPage.scss";
 
-const ToDoPage = (props) => {
-    useEffect(() => {
-        props.fetchTodos();
-    }, []);
-
-    const { todoList } = props;
+const ToDoPage = ({ todoList }) => {
     return (
         <div className="toDoList">
             <h1>To do</h1>
@@ -34,8 +26,4 @@ const ToDoPage = (props) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    todoList: state.todo,
-});
-
-export default connect(mapStateToProps, { fetchTodos })(ToDoPage);
+export default ToDoPage;

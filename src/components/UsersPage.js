@@ -1,16 +1,9 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { fetchUser } from "../actions/UsersActions";
 import "../styles/UsersPage.scss";
 import { NavLink } from "react-router-dom";
 
-const UsersPage = (props) => {
+const UsersPage = ({ usersList }) => {
     let imgUrl =
         "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png";
-    useEffect(() => {
-        props.fetchUser();
-    }, []);
-    const { usersList } = props;
     return (
         <div>
             <ul className="usersList">
@@ -34,8 +27,4 @@ const UsersPage = (props) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    usersList: state.users,
-});
-
-export default connect(mapStateToProps, { fetchUser })(UsersPage);
+export default UsersPage;

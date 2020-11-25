@@ -8,6 +8,7 @@ const PostForm = (props) => {
 
             <div>
                 <Field
+                    id="title"
                     placeholder={"Title"}
                     name={"title"}
                     component={"input"}
@@ -15,6 +16,7 @@ const PostForm = (props) => {
             </div>
             <div>
                 <Field
+                    id="text"
                     placeholder={"Write Something..."}
                     name={"body"}
                     component={"textarea"}
