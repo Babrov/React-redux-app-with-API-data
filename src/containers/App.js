@@ -13,7 +13,11 @@ const App = () => {
             <div className="App">
                 <Navigation />
                 <Switch>
-                    <Redirect exact from="/" to="/posts" />
+                    <Redirect
+                        exact
+                        from="/React-redux-app-with-API-data/"
+                        to="/posts"
+                    />
                     <Route exact path="/posts">
                         <PostsPageContainer />
                     </Route>
